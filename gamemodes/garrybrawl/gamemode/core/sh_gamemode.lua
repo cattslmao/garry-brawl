@@ -44,18 +44,17 @@ end
 function Clean()
     local HookCount = table.Count( LoadedHooks )
     
-    if ( HookCount <= 0 ) then
-        return
-    end
-
-    JB.Log.Info( string.format( "Clearing %s hook(s).", HookCount ) )
+    if ( HookCount > 0 ) then
+        JB.Log.Info( string.format( "Clearing %s hook(s).", HookCount ) )
     
-    for _, v in ipairs( LoadedHooks ) do
-        JB.Log.Info( string.format( "Clearing hook \"%s\".", v[2] ) )
-        hook.Remove( v[1], v[2] )
+        for _, v in ipairs( LoadedHooks ) do
+            JB.Log.Info( string.format( "Clearing hook \"%s\".", v[2] ) )
+            hook.Remove( v[1], v[2] )
+        end
+
+        LoadedHooks = {}
     end
 
-    LoadedHooks = {}
     TeamRef = {}
 end
 

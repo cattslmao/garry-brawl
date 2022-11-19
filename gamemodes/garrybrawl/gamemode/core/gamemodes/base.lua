@@ -10,8 +10,6 @@ JB.Gamemode.Register( "base", {
         end,
     },
 
-    ClientHooks = {},
-
     PlayerClass = {},
 
     RoundLength = 150, -- 2 minutes 30 seconds
@@ -26,10 +24,6 @@ JB.Gamemode.Register( "base", {
             color = Color( 255, 0, 0 ),
             joinable = true,
 
-            sprint = false,
-            crouch = false,
-            prone = false,
-
             spawnpoints = { "jb_spawn_" },
         },
         [2] = { 
@@ -38,16 +32,6 @@ JB.Gamemode.Register( "base", {
             joinable = true,
 
             spawnpoints = { "jb_spawn_" },
-
-            loadout = {
-                choice_type = "rand", // "all"
-                bank = {
-                    [1] = {
-                        "ax47",
-                        "crowbar",
-                    },
-                },
-            },
         },
     },
 } )

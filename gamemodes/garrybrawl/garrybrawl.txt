@@ -1,0 +1,8 @@
+"garrybrawl"
+{
+    "base"		"base"
+	"title"		"Garry Brawl: Episode 3"
+	"maps"		"^jb_"
+	"category"	"pvp"
+	"menusystem"	"1"
+}
